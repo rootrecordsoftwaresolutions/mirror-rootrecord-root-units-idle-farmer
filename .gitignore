@@ -1,0 +1,30 @@
+node_modules/
+build/
+dist/
+.gradle/
+.wrangler/
+.next/
+
+# Android / Capacitor
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+local.properties
+SIGNING-CREDENTIALS-LOCAL.txt
+upload_certificate.pem
+Mobile/root-farms-app/android/app/src/main/assets/
+Mobile/root-farms-app/android/capacitor-cordova-android-plugins/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+
+# Env / secrets
+.env
+.env.*
+!*.example
+credentials.env
