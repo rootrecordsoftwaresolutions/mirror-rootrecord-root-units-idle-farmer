@@ -1,39 +1,13 @@
-# Root Units Idle Farmer
+# mirror-rootrecord-root-units-idle-farmer
 
-Private product repo for **Root Units Idle Farmer** (`com.rootrecord.rootunits`) — desktop web, mobile web shell, and Android (Capacitor).
+> **Inventory mirror (2026-08)** — not primary development.
 
-Canonical monorepo copy: `RootRecord/MonoRepo` (run `Mobile/scripts/export-root-units-idle-farmer-repo.ps1` there to refresh this tree).
+> **Authority:** [RootRecord-Software-Solutions](https://github.com/RootRecord-Software-Solutions) (org)  
+> **Docs index:** [MIGRATION-DOCS-INDEX](https://github.com/RootRecord-Software-Solutions/RootRecord-Library/blob/main/Documentation/00-architecture/MIGRATION-DOCS-INDEX-2026-09-28.md)  
+> **Product / archive catalog:** [Product-Archive-Repo-Catalog](https://github.com/RootRecord-Software-Solutions/RootRecord-Library/blob/main/Documentation/00-architecture/Product-Archive-Repo-Catalog-2026-09-28.md)  
+> **Live Pacific:** [RootRecord-Pacific-Solar-Server](https://github.com/RootRecord-Software-Solutions/RootRecord-Pacific-Solar-Server)  
+> **Library:** [RootRecord-Library](https://github.com/RootRecord-Software-Solutions/RootRecord-Library)
 
-## Layout
+Mirror of `RootRecord/root-units-idle-farmer`. **Do not develop here.** Product track A (RootMC Paper).
 
-| Path | Purpose |
-|------|---------|
-| `Web/apps/root-farms-web/` | Full game (desktop / Pages) |
-| `Web/apps/root-farms-mobile-web/` | Mobile UI; imports core via `@core` → `root-farms-web/src` |
-| `Mobile/root-farms-app/` | Android Capacitor wrapper |
-| `Web/cloudflare/rootrecord-api-account/` | Farms API **slice** (migrations + handlers); deploy full Worker from monorepo |
-| `Web/main/root-farms/` | Product / design notes |
-
-## Build Android release
-
-From repo root (requires JDK, Android SDK, `pnpm`):
-
-```bat
-build-root-farms-android.bat
-```
-
-Outputs: `Mobile/builds/root-farms/RootRecord-RootFarms-<version>.apk` and `.aab`
-
-Signing: `Mobile/root-farms-app/android/setup-release-signing.ps1` (do not commit `.jks` / `keystore.properties`).
-
-## Deploy web (Cloudflare Pages)
-
-```bat
-cloudflare-deploy-root-farms.bat
-```
-
-Live site: https://farms.rootrecord.info/
-
-## API
-
-Game clients call `rootrecord-api-account` (`/api/farms/*`). Source of truth for deploy: monorepo `Web/cloudflare/rootrecord-api-account/`. This repo keeps a farms-only snapshot for reference.
+*Transition banner 2026-09-28 HST.*
